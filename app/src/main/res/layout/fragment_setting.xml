@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Settings">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:src="@drawable/ic_account_circle_black_24dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_gravity="center"/>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:text="Edit Profile   "
+                    android:id="@+id/btnprofile"
+                    android:layout_marginRight="20dp"
+                    android:drawableRight="@drawable/ic_edit_black_24dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_lock_black_24dp"
+                    android:drawableRight="@drawable/ic_keyboard_arrow_right_black_24dp"
+                    android:layout_margin="10dp"
+                    android:id="@+id/privacy"
+                    android:textColor="#000000"
+                    android:textSize="20dp"
+                    android:text="  Privacy"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_phonelink_lock_black_24dp"
+                    android:drawableRight="@drawable/ic_keyboard_arrow_right_black_24dp"
+                    android:layout_margin="10dp"
+                    android:id="@+id/changepass"
+                    android:textColor="#000000"
+                    android:textSize="20dp"
+                    android:text="  Change or Reset Password"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_notifications_black_24dp"
+                    android:layout_margin="10dp"
+                    android:textColor="#000000"
+                    android:drawableRight="@drawable/ic_keyboard_arrow_right_black_24dp"
+                    android:textSize="20dp"
+                    android:id="@+id/notifications"
+                    android:text="  Notifications"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_email_black_24dp"
+                    android:layout_margin="10dp"
+                    android:drawableRight="@drawable/ic_keyboard_arrow_right_black_24dp"
+                    android:textColor="#000000"
+                    android:textSize="20dp"
+                    android:id="@+id/changeemail"
+                    android:text="  Change Email I'd"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_call_black_24dp"
+                    android:layout_margin="10dp"
+                    android:drawableRight="@drawable/ic_keyboard_arrow_right_black_24dp"
+                    android:textColor="#000000"
+                    android:textSize="20dp"
+                    android:id="@+id/changephone"
+                    android:text="  Change Phone No."/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_exit_to_app_black_24dp"
+                    android:textColor="#000000"
+                    android:layout_margin="10dp"
+                    android:textSize="23dp"
+                    android:id="@+id/logout"
+                    android:text="  Logout"/>
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>

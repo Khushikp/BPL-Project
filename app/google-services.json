@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "373626781091",
+    "project_id": "bpl-project-fab61",
+    "storage_bucket": "bpl-project-fab61.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:373626781091:android:4aee5a1b31e7735aff2e16",
+        "android_client_info": {
+          "package_name": "com.example.bpl"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "373626781091-la51pku050590924jl8nfqc564bop3va.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.bpl",
+            "certificate_hash": "ef7d325c852ba1e96f034957c1d75885dec817c8"
+          }
+        },
+        {
+          "client_id": "373626781091-bn9j49pnjp9gvt0k9med945ljdd0dr81.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYe_kB9kDZSjO29pM_J71Hma3F6yaP25g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "373626781091-bn9j49pnjp9gvt0k9med945ljdd0dr81.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

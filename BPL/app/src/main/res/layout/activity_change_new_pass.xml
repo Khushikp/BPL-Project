@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".change_new_pass">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Confirm Password"
+            android:textSize="50dp"
+            android:fontFamily="@font/satisfy_regular"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="30dp"
+            android:textColor="#000000"
+            android:gravity="center"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/boxes"
+            android:textColorHint="#000000"
+            android:padding="10dp"
+            android:id="@+id/oldpass"
+            android:inputType="textPassword"
+            android:hint="Old password"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/boxes"
+            android:textColorHint="#000000"
+            android:padding="10dp"
+            android:id="@+id/newpass"
+            android:inputType="textPassword"
+            android:hint="New password"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/boxes"
+            android:textColorHint="#000000"
+            android:inputType="textPassword"
+            android:id="@+id/confirmpass"
+            android:hint="Confirm password"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:textSize="25dp"
+            android:padding="10dp"
+            android:background="#3F53B9"
+            android:textColor="#ffffff"
+            android:id="@+id/confirm"
+            android:text="Confirm"/>
+
+    </LinearLayout>

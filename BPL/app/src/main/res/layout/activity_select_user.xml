@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".selectUser">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="72dp"
+        tools:layout_editor_absoluteY="16dp">
+
+        <!--TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="400px"
+            android:layout_marginRight="20px"
+            android:text="Login"
+            android:layout_marginTop="80dp"
+            android:textAlignment="center"
+            android:background="@color/colorPrimary"
+            android:textSize="100px" /-->
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20px"
+            android:layout_marginTop="300dp"
+            android:layout_marginRight="20px"
+            android:background="@color/colorPrimary"
+            android:text="User Login" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20px"
+            android:layout_marginTop="20px"
+            android:layout_marginRight="20px"
+            android:background="@color/colorPrimary"
+            android:text="Photographer Login" />
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

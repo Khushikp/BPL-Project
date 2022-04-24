@@ -1,53 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:layout_height="match_parent"
+    android:id="@+id/drawerLayout"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start"
     tools:showIn="@layout/app_bar_dashboard">
 
-<RelativeLayout
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/nav_view"
+        app:headerLayout="@layout/nav_header_dashboard"
+        app:menu="@menu/activity_main_drawer"
+        android:layout_gravity="start"/>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbaraction"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    <RelativeLayout
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     tools:ignore="MissingConstraints">
-        <LinearLayout
+
+    <LinearLayout
+        android:id="@+id/location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
+
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:id="@+id/location"
-            tools:ignore="MissingConstraints">
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/courgette_regular"
+            android:text="Locations"
+            android:textColor="#0D47A1"
+            android:textSize="25dp" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:fontFamily="@font/satisfy_regular"
-                android:text="Locations"
-                android:textColor="#0D47A1"
-                android:textSize="25dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30px"
+            android:layout_marginBottom="5dp"
+            android:text="See more"
+            android:textAlignment="viewEnd"
+            android:textColor="@color/light_blue_400" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="See more"
-                android:layout_marginRight="30px"
-                android:layout_marginBottom="5dp"
-                android:textColor="@color/light_blue_400"
-                android:textAlignment="viewEnd"/>
+        <com.denzcoskun.imageslider.ImageSlider
+            android:id="@+id/slider"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            app:auto_cycle="true"
+            app:corner_radius="5"
+            app:delay="0"
+            app:error_image="@drawable/edittext_bg_layout"
+            app:period="1000"
+            app:placeholder="@drawable/edittext_bg_layout" />
 
-            <com.denzcoskun.imageslider.ImageSlider
-                android:layout_width="match_parent"
-                android:layout_height="250dp"
-                app:auto_cycle="true"
-                app:delay="0"
-                app:placeholder="@drawable/edittext_bg_layout"
-                app:error_image="@drawable/edittext_bg_layout"
-                app:period="1000"
-                app:corner_radius="5"
-                android:id="@+id/slider"/>
-
-            </LinearLayout>
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -55,14 +72,12 @@
         android:layout_below="@+id/location"
         android:id="@+id/photoprofile"
         android:orientation="vertical"
-
         tools:ignore="MissingConstraints">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:fontFamily="@font/satisfy_regular"
+            android:fontFamily="@font/courgette_regular"
             android:text="Photographer's Profile"
             android:textColor="#0D47A1"
             android:textSize="25dp" />
@@ -78,42 +93,165 @@
             android:textAlignment="viewEnd"/>
     </LinearLayout>
 
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/photoprofile">
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/photoprofile"
         android:orientation="horizontal">
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/boxes"
+            android:gravity="center"
+            android:layout_marginLeft="10dp"
+            android:backgroundTint="#D3E7F0"
+            android:layout_marginRight="10dp"
             android:orientation="vertical">
     <de.hdodenhof.circleimageview.CircleImageView
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:src="@drawable/ic_menu_profile"
-        app:civ_border_color="#FF000000"
-        app:civ_border_width="4dp" />
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/profile1"
+        app:civ_border_color="#686565"
+        android:layout_marginTop="10dp"
+        app:civ_border_width="2dp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="hello"/>
+                android:fontFamily="@font/damion_regular"
+                android:textSize="20dp"
+                android:text="Andrew Taylor"/>
 
             <Button
-                android:layout_width="wrap_content"
+                android:layout_width="220dp"
                 android:layout_height="wrap_content"
+                android:background="@drawable/background"
+                android:textColor="#FFFFFF"
                 android:text="@string/menu_profile"/>
         </LinearLayout>
-        <de.hdodenhof.circleimageview.CircleImageView
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/boxes"
+                android:backgroundTint="@color/gray_400"
+                android:gravity="center"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical">
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/profile2"
+                    app:civ_border_color="#FF000000"
+                    app:civ_border_width="4dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Williams Harris"/>
+
+                <Button
+                    android:layout_width="220dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/background"
+                    android:textColor="#FFFFFF"
+                    android:text="@string/menu_profile"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/boxes"
+                android:backgroundTint="@color/gray_400"
+                android:gravity="center"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical">
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/profile4"
+                    app:civ_border_color="#FF000000"
+                    app:civ_border_width="4dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sanna Miller"/>
+
+                <Button
+                    android:layout_width="220dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/background"
+                    android:textColor="#FFFFFF"
+                    android:text="@string/menu_profile"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/boxes"
+                android:backgroundTint="@color/gray_400"
+                android:gravity="center"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical">
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/profile5"
+                    app:civ_border_color="#FF000000"
+                    app:civ_border_width="4dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sophia Clarke"/>
+
+                <Button
+                    android:layout_width="220dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/background"
+                    android:textColor="#FFFFFF"
+                    android:text="@string/menu_profile"/>
+            </LinearLayout>
+
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_menu_profile"
-            app:civ_border_color="#FF000000"
-            app:civ_border_width="4dp" />
+            android:background="@drawable/boxes"
+            android:backgroundTint="@color/gray_400"
+            android:gravity="center"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/profile3"
+                app:civ_border_color="#FF000000"
+                app:civ_border_width="4dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="David Wood"/>
+
+            <Button
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background"
+                android:textColor="#FFFFFF"
+                android:text="@string/menu_profile"/>
+        </LinearLayout>
+
+
+
 
     </LinearLayout>
+
+        </HorizontalScrollView>
 </RelativeLayout>
 
     <RelativeLayout
@@ -129,9 +267,9 @@
             app:itemIconTint="@color/colorEdit"
             app:itemTextColor="@color/colorEdit"
             app:menu="@menu/bottommenu"
-            android:background="@color/light_blue_600"
+            android:background="@drawable/background"
             tools:ignore="MissingConstraints">
 
         </com.google.android.material.bottomnavigation.BottomNavigationView>
     </RelativeLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

@@ -1,38 +1,25 @@
 package com.example.bpl;
 
-import android.app.ProgressDialog;
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 
 public class Signin extends AppCompatActivity {
 
-    EditText userName, userEmail, password, confirmPassword, userPhone;
+  /*  EditText userName, userEmail, password, confirmPassword, userPhone;
     Button signInBtn;
     String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
     ProgressDialog progressDialog;
 
     FirebaseAuth mAuth;
-    FirebaseUser mUser;
+    FirebaseUser mUser;*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signin);
 
-        userName = findViewById(R.id.user_name);
+      /*  userName = findViewById(R.id.user_name);
         userEmail = findViewById(R.id.user_email);
         userPhone = findViewById(R.id.user_phone);
         password = findViewById(R.id.password);
@@ -91,6 +78,6 @@ public class Signin extends AppCompatActivity {
     private void sendUserToNextActivity() {
         Intent intent = new Intent(Signin.this,Login.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
-        startActivity(intent);
+        startActivity(intent);*/
     }
 }

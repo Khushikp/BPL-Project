@@ -8,7 +8,10 @@
         <entry key="..\:/DEGREE/BPL/app/src/main/res/drawable-v24/ic_menu_home2.xml" value="0.102" />
         <entry key="..\:/DEGREE/BPL/app/src/main/res/drawable-v24/ic_photo_library_black_24dp.xml" value="0.1035" />
         <entry key="..\:/DEGREE/BPL/app/src/main/res/drawable-v24/nonactive_dot.xml" value="0.1035" />
+        <entry key="..\:/DEGREE/BPL/app/src/main/res/drawable/background.xml" value="0.1035" />
+        <entry key="..\:/DEGREE/BPL/app/src/main/res/drawable/bgbutton.xml" value="0.1035" />
         <entry key="..\:/DEGREE/BPL/app/src/main/res/drawable/boxes.xml" value="0.1035" />
+        <entry key="..\:/DEGREE/BPL/app/src/main/res/drawable/colorbg.xml" value="0.1035" />
         <entry key="..\:/DEGREE/BPL/app/src/main/res/drawable/edittext_bg_layout.xml" value="0.131" />
         <entry key="..\:/DEGREE/BPL/app/src/main/res/drawable/ic_account_circle_black_24dp.xml" value="0.1035" />
         <entry key="..\:/DEGREE/BPL/app/src/main/res/drawable/ic_baseline_settings_24.xml" value="0.131" />
@@ -34,7 +37,9 @@
         <entry key="..\:/DEGREE/BPL/app/src/main/res/drawable/ic_menu_wishlist2.xml" value="0.1035" />
         <entry key="..\:/DEGREE/BPL/app/src/main/res/drawable/ic_notifications_black_24dp.xml" value="0.1035" />
         <entry key="..\:/DEGREE/BPL/app/src/main/res/drawable/ic_phonelink_lock_black_24dp.xml" value="0.1035" />
+        <entry key="..\:/DEGREE/BPL/app/src/main/res/drawable/profilebg.xml" value="0.1035" />
         <entry key="..\:/DEGREE/BPL/app/src/main/res/drawable/setting.xml" value="0.131" />
+        <entry key="..\:/DEGREE/BPL/app/src/main/res/drawable/side_nav_bar.xml" value="0.1035" />
         <entry key="..\:/DEGREE/BPL/app/src/main/res/layout/activity_booking.xml" value="0.21510416666666668" />
         <entry key="..\:/DEGREE/BPL/app/src/main/res/layout/activity_change_email.xml" value="0.21510416666666668" />
         <entry key="..\:/DEGREE/BPL/app/src/main/res/layout/activity_change_new_pass.xml" value="0.21510416666666668" />
@@ -50,13 +55,15 @@
         <entry key="..\:/DEGREE/BPL/app/src/main/res/layout/activity_phoographer.xml" value="0.21510416666666668" />
         <entry key="..\:/DEGREE/BPL/app/src/main/res/layout/activity_privacy.xml" value="0.25" />
         <entry key="..\:/DEGREE/BPL/app/src/main/res/layout/activity_profile.xml" value="0.22" />
+        <entry key="..\:/DEGREE/BPL/app/src/main/res/layout/activity_see_more2.xml" value="0.10460992907801418" />
         <entry key="..\:/DEGREE/BPL/app/src/main/res/layout/activity_select_user.xml" value="0.21510416666666668" />
         <entry key="..\:/DEGREE/BPL/app/src/main/res/layout/activity_signin.xml" value="0.18" />
         <entry key="..\:/DEGREE/BPL/app/src/main/res/layout/activity_splashscreen.xml" value="0.20104166666666667" />
         <entry key="..\:/DEGREE/BPL/app/src/main/res/layout/activity_suggestion.xml" value="0.21510416666666668" />
+        <entry key="..\:/DEGREE/BPL/app/src/main/res/layout/activity_user.xml" value="0.20104166666666667" />
         <entry key="..\:/DEGREE/BPL/app/src/main/res/layout/app_bar_dashboard.xml" value="0.21510416666666668" />
         <entry key="..\:/DEGREE/BPL/app/src/main/res/layout/app_bar_navigation.xml" value="0.21510416666666668" />
-        <entry key="..\:/DEGREE/BPL/app/src/main/res/layout/content_dashboard.xml" value="0.21510416666666668" />
+        <entry key="..\:/DEGREE/BPL/app/src/main/res/layout/content_dashboard.xml" value="0.2606516290726817" />
         <entry key="..\:/DEGREE/BPL/app/src/main/res/layout/content_main.xml" value="0.21510416666666668" />
         <entry key="..\:/DEGREE/BPL/app/src/main/res/layout/content_navigation.xml" value="0.21510416666666668" />
         <entry key="..\:/DEGREE/BPL/app/src/main/res/layout/content_profile.xml" value="0.1" />
@@ -78,6 +85,7 @@
         <entry key="..\:/DEGREE/BPL/app/src/main/res/layout/fragment_setting.xml" value="0.21510416666666668" />
         <entry key="..\:/DEGREE/BPL/app/src/main/res/layout/fragment_slideshow.xml" value="0.21510416666666668" />
         <entry key="..\:/DEGREE/BPL/app/src/main/res/layout/fragment_wishlist.xml" value="0.21510416666666668" />
+        <entry key="..\:/DEGREE/BPL/app/src/main/res/layout/list_item.xml" value="0.1" />
         <entry key="..\:/DEGREE/BPL/app/src/main/res/layout/nav_header_dashboard.xml" value="0.21510416666666668" />
         <entry key="..\:/DEGREE/BPL/app/src/main/res/layout/nav_header_navigation.xml" value="0.21510416666666668" />
         <entry key="..\:/DEGREE/BPL/app/src/main/res/layout/sample_booking.xml" value="0.20104166666666667" />
@@ -85,6 +93,7 @@
         <entry key="..\:/DEGREE/BPL/app/src/main/res/menu/bottommenu.xml" value="0.21510416666666668" />
         <entry key="..\:/DEGREE/BPL/app/src/main/res/menu/dashboard.xml" value="0.21510416666666668" />
         <entry key="..\:/DEGREE/BPL/app/src/main/res/menu/navigation.xml" value="0.21510416666666668" />
+        <entry key="..\:/DEGREE/BPL/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1035" />
       </map>
     </option>
   </component>

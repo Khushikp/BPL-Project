@@ -2,9 +2,11 @@ package com.example.bpl;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -21,13 +23,14 @@ import com.google.android.material.navigation.NavigationView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Dashboard extends AppCompatActivity {
+public class Dashboard extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     AppBarConfiguration mAppBarConfiguration;
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     TextView seemore2;
     Toolbar toolbaraction;
+    ActionBarDrawerToggle actionBarDrawerToggle;
 
 
     @Override
@@ -35,19 +38,21 @@ public class Dashboard extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.content_dashboard);
 
+        seemore2 = findViewById(R.id.seemore2);
         drawerLayout = findViewById(R.id.drawerLayout);
         navigationView = findViewById(R.id.nav_view);
         toolbaraction = findViewById(R.id.toolbaraction);
         seemore2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent= new Intent(Dashboard.this,l.class)
+                Intent intent= new Intent(Dashboard.this,SeeMore2.class);
+                startActivity(intent);
             }
         });
 
         setSupportActionBar(toolbaraction);
 
-        ActionBarDrawerToggle actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout ,toolbaraction, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+         actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout ,toolbaraction, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
 
         drawerLayout.addDrawerListener(actionBarDrawerToggle);
          actionBarDrawerToggle.syncState();
@@ -70,30 +75,14 @@ public class Dashboard extends AppCompatActivity {
         // Set Home selected
         bottomNavigationView.setSelectedItemId(R.id.home);
 
-        // Perform item selected listener
-        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
-                switch (item.getItemId()) {
-                    case R.id.suggestion:
-                        Intent intent = new Intent(Dashboard.this, Suggestion.class);
-                        startActivity(intent);
-                       case R.id.wishlist:
-                        startActivity(new Intent(getApplicationContext(), wishlist.class));
-                        overridePendingTransition(0, 0);
-                    case R.id.home:
-                        return true;
-                    case R.id.booking:
-                       Intent in = new Intent(Dashboard.this, booking.class);
-                       startActivity(in);
-                    case R.id.profile:
-                        startActivity(new Intent(getApplicationContext(), profile.class));
-                        overridePendingTransition(0, 0);
-                }
-                return true;
-            }
-        });
+
+
+        // Perform item selected listener
+
+
+
+        navigationView.setNavigationItemSelectedListener(this);
 /*
     com.example.bpl.databinding.ActivityDashboardBinding binding = ActivityDashboardBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
@@ -140,5 +129,34 @@ public class Dashboard extends AppCompatActivity {
     }
 
     public void setSupportActionBar(Toolbar toolbar) {
+    }
+
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if(actionBarDrawerToggle.onOptionsItemSelected(item)){
+
+            return true;
+
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.activity_main_drawer,menu);
+        return true;
+    }
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+        if(item.getItemId() == R.id.home){
+
+            Toast.makeText(this,"dfsdf",Toast.LENGTH_SHORT).show();
+        }
+
+        return true;
     }
 }

@@ -8,15 +8,20 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.GravityInt;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.navigation.fragment.NavHostFragment;
 import androidx.navigation.ui.AppBarConfiguration;
 
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.models.SlideModel;
+import com.example.bpl.databinding.FragmentFirst2Binding;
+import com.example.bpl.ui.booking.BookingFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 
@@ -31,7 +36,7 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
     TextView seemore2;
     Toolbar toolbaraction;
     ActionBarDrawerToggle actionBarDrawerToggle;
-
+    private FragmentFirst2Binding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,7 +63,8 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
          actionBarDrawerToggle.syncState();
 
          navigationView = findViewById(R.id.nav_view);
-
+        navigationView.bringToFront();
+        navigationView.setNavigationItemSelectedListener(this);
 
         ImageSlider imageSlider = findViewById(R.id.slider);
         List<SlideModel> slideModels = new ArrayList<>();
@@ -72,6 +78,7 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
 
+
         // Set Home selected
         bottomNavigationView.setSelectedItemId(R.id.home);
 
@@ -82,7 +89,7 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
 
 
 
-        navigationView.setNavigationItemSelectedListener(this);
+        //navigationView.setNavigationItemSelectedListener(this);
 /*
     com.example.bpl.databinding.ActivityDashboardBinding binding = ActivityDashboardBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
@@ -132,15 +139,21 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
     }
 
 
-    @Override
+/*    @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        if(actionBarDrawerToggle.onOptionsItemSelected(item)){
 
+        if(actionBarDrawerToggle.onOptionsItemSelected(item)){
+            switch (item.getItemId()){
+
+                case R.id.nav_booking:
+                Toast.makeText(this, "PROFILE TEST", Toast.LENGTH_SHORT).show();
+                break;
+            }
             return true;
 
         }
         return super.onOptionsItemSelected(item);
-    }
+    }*/
 
 
     @Override
@@ -152,11 +165,30 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
+        /*NOTE: DRAWER MENU ACTION AHI THI CHALASE.
+         PARTICULAR JE ID ITEM MA AAPEL CHHE A ID THI CONDITION CHECK KARI NE SCREEN OPEN KARAVI.
+         WRITTEN BY : RAJESH GONDALIYA
+         */
+        drawerLayout.closeDrawer(GravityCompat.START);
+        if(item.getItemId() == R.id.nav_booking) {
+        //getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new profilefragment()).commit();
+            Intent newIntent = new Intent(this, booking.class);
+            startActivity(newIntent);
+        }
+        return true;
+    }
+
+    /*@Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        System.out.println("THIS IS WORKING");
         if(item.getItemId() == R.id.home){
 
             Toast.makeText(this,"dfsdf",Toast.LENGTH_SHORT).show();
+        }else if (item.getItemId() == R.id.nav_booking){
+            Toast.makeText(this,"dfsdf",Toast.LENGTH_SHORT).show();
+
         }
 
         return true;
-    }
+    }*/
 }

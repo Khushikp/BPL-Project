@@ -1,11 +1,15 @@
 package com.example.bpl;
 
+import android.content.ActivityNotFoundException;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.transition.Slide;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -16,11 +20,13 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.navigation.ui.AppBarConfiguration;
 
 import com.denzcoskun.imageslider.ImageSlider;
+import com.denzcoskun.imageslider.interfaces.ItemClickListener;
 import com.denzcoskun.imageslider.models.SlideModel;
 import com.example.bpl.databinding.FragmentFirst2Binding;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 
+import java.net.URI;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -33,6 +39,8 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
     Toolbar toolbaraction;
     ActionBarDrawerToggle actionBarDrawerToggle;
     private FragmentFirst2Binding binding;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,7 +79,14 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
         slideModels.add(new SlideModel(R.drawable.diu, "Diu"));
 
         imageSlider.setImageList(slideModels, true);
-
+        imageSlider.setItemClickListener(new ItemClickListener() {
+            @Override
+            public void onItemSelected(int i) {
+                System.out.println("SELECTED IMAGE INDEX = " + i);
+                SlideModel obj = slideModels.get(i);
+                redirectToMapScreen(obj);
+            }
+        });
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
 
 
@@ -130,7 +145,20 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();*/
     }
-
+    void redirectToMapScreen(SlideModel obj){
+        String strLocationName = obj.getTitle();
+        System.out.println(strLocationName);
+        try{
+            //Uri uri = Uri.parse("https://www.google.co.in/maps/dir/rajkot/diu");  FOR ROOT DRAW
+            Uri uri = Uri.parse("http://maps.google.com/maps?q=" + strLocationName);
+            Intent intent = new Intent(Intent.ACTION_VIEW,uri);
+            intent.setPackage("com.google.android.apps.maps");
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
+        }catch (ActivityNotFoundException e){
+            Toast.makeText(this,"You Don't have Map",Toast.LENGTH_LONG).show();
+        }
+    }
     public void setSupportActionBar(Toolbar toolbar) {
     }
 

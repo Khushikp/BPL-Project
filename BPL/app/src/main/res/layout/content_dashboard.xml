@@ -121,9 +121,9 @@
             android:layout_height="wrap_content"
             android:background="@drawable/boxes"
             android:gravity="center"
+            android:layout_marginRight="10dp"
             android:layout_marginLeft="10dp"
             android:backgroundTint="@color/lightblueprofile"
-            android:layout_marginRight="10dp"
             android:orientation="vertical">
     <de.hdodenhof.circleimageview.CircleImageView
         android:layout_width="100dp"
@@ -153,7 +153,6 @@
             android:layout_height="wrap_content"
             android:background="@drawable/boxes"
             android:gravity="center"
-            android:layout_marginLeft="10dp"
             android:backgroundTint="@color/lightblueprofile"
             android:layout_marginRight="10dp"
             android:orientation="vertical">

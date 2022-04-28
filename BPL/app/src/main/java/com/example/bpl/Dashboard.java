@@ -29,6 +29,7 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
     AppBarConfiguration mAppBarConfiguration;
     DrawerLayout drawerLayout;
     NavigationView navigationView;
+    BottomNavigationView bottomNavigationView;
     TextView seemore2;
     Toolbar toolbaraction;
     ActionBarDrawerToggle actionBarDrawerToggle;
@@ -43,6 +44,7 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
         drawerLayout = findViewById(R.id.drawerLayout);
         navigationView = findViewById(R.id.nav_view);
         toolbaraction = findViewById(R.id.toolbaraction);
+        bottomNavigationView = findViewById(R.id.bottom_navigation);
         seemore2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -74,83 +76,40 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
 
-
         // Set Home selected
-        bottomNavigationView.setSelectedItemId(R.id.home);
-
-
-
-
-        // Perform item selected listener
-
-
-
-        //navigationView.setNavigationItemSelectedListener(this);
-/*
-    com.example.bpl.databinding.ActivityDashboardBinding binding = ActivityDashboardBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
-
-       setSupportActionBar(binding.appBarDashboarld.toolbar);
-        binding.appBarDashboard.toolbar.setOnClickListener(new View.OnClickListener() {
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()){
+                    case R.id.bottom_home: break;
+
+                    case R.id.bottom_booking:
+                        Intent intent = new Intent(Dashboard.this, booking.class);
+                        startActivity(intent);
+                        break;
+
+                    case R.id.bottom_suggestion:
+                        Intent intent1 = new Intent(Dashboard.this, Suggestion.class);
+                        startActivity(intent1);
+                        break;
+
+                    case R.id.bottom_wishlist:
+                        Intent intent2 = new Intent(Dashboard.this, wishlist.class);
+                        startActivity(intent2);
+                        break;
+
+                    case R.id.bottom_profile:
+                        Intent intent3 = new Intent(Dashboard.this, profile.class);
+                        startActivity(intent3);
+                        break;
+                }
+                return true;
             }
         });
-
-        ActivityDashboardBinding binding;
-        DrawerLayout drawer = binding.drawerLayout;
-        NavigationView navigationView = binding.navView;
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
-       // AppBarConfiguration mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_profile, R.id.nav_wishlist, R.id.nav_booking, R.id.nav_share, R.id.nav_help, R.id.nav_logout)
-                .setOpenableLayout(drawer)
-                .build();
-        NavController navController = findNavController(this, R.id.action_bar_activity_content);
-         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
-            NavigationUI.setupWithNavController(navigationView, navController);
-    }
-
-    private void setSupportActionBar(Toolbar toolbar) {
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-         //Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.dashboard, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onSupportNavigateUp() {
-        NavController navController = findNavController(this, R.id.action_bar_activity_content);
-
-        return NavigationUI.navigateUp(navController, mAppBarConfiguration)
-                || super.onSupportNavigateUp();*/
     }
 
     public void setSupportActionBar(Toolbar toolbar) {
     }
-
-
-/*    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-
-        if(actionBarDrawerToggle.onOptionsItemSelected(item)){
-            switch (item.getItemId()){
-
-                case R.id.nav_booking:
-                Toast.makeText(this, "PROFILE TEST", Toast.LENGTH_SHORT).show();
-                break;
-            }
-            return true;
-
-        }
-        return super.onOptionsItemSelected(item);
-    }*/
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -211,19 +170,4 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
         }
         return true;
     }
-
-    /*@Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        System.out.println("THIS IS WORKING");
-        if(item.getItemId() == R.id.home){
-
-            Toast.makeText(this,"dfsdf",Toast.LENGTH_SHORT).show();
-        }else if (item.getItemId() == R.id.nav_booking){
-            Toast.makeText(this,"dfsdf",Toast.LENGTH_SHORT).show();
-
-        }
-
-        return true;
-    }*/
-
 }

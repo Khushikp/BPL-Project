@@ -5,22 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".profile">
-
-    <com.google.android.material.appbar.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
-
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
-
-    </com.google.android.material.appbar.AppBarLayout>
-
-   <LinearLayout
+ <LinearLayout
        android:layout_width="match_parent"
        android:layout_height="match_parent"
        android:orientation="vertical">
@@ -30,13 +15,15 @@
                android:layout_height="wrap_content">
                <LinearLayout
                    android:layout_width="match_parent"
-                   android:layout_height="match_parent"
+                   android:layout_height="wrap_content"
+                   android:background="@drawable/boxes"
+                   android:backgroundTint="@drawable/background"
                    android:layout_margin="10dp"
                    android:orientation="vertical">
-                   <ImageView
+                   <de.hdodenhof.circleimageview.CircleImageView
                        android:layout_width="150dp"
                        android:layout_height="120dp"
-                       android:src="@drawable/logo"
+                       android:src="@drawable/ic_menu_profile"
                        android:layout_marginTop="50dp"
                        android:layout_gravity="center"/>
                    <Button
@@ -53,15 +40,16 @@
                        android:layout_width="match_parent"
                        android:layout_height="wrap_content"
                        android:layout_marginTop="10dp"
-                       android:text="Full Name"/>
+                       android:hint="Full Name*"/>
+
                    <EditText
                        android:layout_width="match_parent"
                        android:layout_height="wrap_content"
-                       android:text="Email*"/>
+                       android:hint="Email*"/>
                    <EditText
                        android:layout_width="match_parent"
                        android:layout_height="wrap_content"
-                       android:text="Phone No.*"/>
+                       android:hint="Phone No.*"/>
 
 
                    <RadioGroup
@@ -71,37 +59,37 @@
                        <RadioButton
                            android:layout_width="wrap_content"
                            android:layout_height="wrap_content"
-                           android:text="Male*"/>
+                           android:hint="Male*"/>
                        <RadioButton
                            android:layout_width="wrap_content"
                            android:layout_height="wrap_content"
-                           android:text="Female*"/>
+                           android:hint="Female*"/>
                    </RadioGroup>
                    <EditText
                        android:layout_width="match_parent"
                        android:layout_height="wrap_content"
-                       android:text="Address*"
+                       android:hint="Address*"
                        android:inputType="textPostalAddress"/>
                    <EditText
                        android:layout_width="match_parent"
                        android:layout_height="wrap_content"
-                       android:text="City*"/>
+                       android:hint="City*"/>
                    <EditText
                        android:layout_width="match_parent"
                        android:layout_height="wrap_content"
-                       android:text="PinCode*"/>
+                       android:hint="PinCode*"/>
                    <EditText
                        android:layout_width="match_parent"
                        android:layout_height="wrap_content"
-                       android:text="Country*"/>
+                       android:hint="Country*"/>
                    <Button
                        android:layout_width="match_parent"
                        android:layout_height="wrap_content"
                        android:layout_margin="10dp"
                        android:layout_marginBottom="100dp"
-                       android:background="#0D47A1"
-                       android:text="Confirm"
-                       android:textColor="#ffffff"
+                       android:background="@color/light_blue_600"
+                       android:hint="Confirm"
+                       android:textColor="@color/white"
                        android:textSize="20dp"
                        android:textStyle="bold" />
                </LinearLayout>

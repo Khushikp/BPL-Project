@@ -94,7 +94,12 @@
         <entry key="..\:/DEGREE/BPL/app/src/main/res/menu/dashboard.xml" value="0.21510416666666668" />
         <entry key="..\:/DEGREE/BPL/app/src/main/res/menu/navigation.xml" value="0.21510416666666668" />
         <entry key="..\:/DEGREE/BPL/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1035" />
+        <entry key="..\:/DEGREE/BPL_Repo/BPL-Project/BPL/app/src/main/res/drawable-v24/ic_menu_home2.xml" value="0.1035" />
         <entry key="..\:/DEGREE/BPL_Repo/BPL-Project/BPL/app/src/main/res/drawable/box2.xml" value="0.1035" />
+        <entry key="..\:/DEGREE/BPL_Repo/BPL-Project/BPL/app/src/main/res/drawable/colorbg.xml" value="0.1035" />
+        <entry key="..\:/DEGREE/BPL_Repo/BPL-Project/BPL/app/src/main/res/drawable/ic_launcher_suggestion.xml" value="0.1035" />
+        <entry key="..\:/DEGREE/BPL_Repo/BPL-Project/BPL/app/src/main/res/drawable/ic_menu_booking.xml" value="0.1035" />
+        <entry key="..\:/DEGREE/BPL_Repo/BPL-Project/BPL/app/src/main/res/drawable/ic_menu_profile.xml" value="0.1035" />
         <entry key="..\:/DEGREE/BPL_Repo/BPL-Project/BPL/app/src/main/res/layout/activity_alert.xml" value="0.21510416666666668" />
         <entry key="..\:/DEGREE/BPL_Repo/BPL-Project/BPL/app/src/main/res/layout/activity_amount.xml" value="0.21510416666666668" />
         <entry key="..\:/DEGREE/BPL_Repo/BPL-Project/BPL/app/src/main/res/layout/activity_booking.xml" value="0.10460992907801418" />
@@ -102,7 +107,7 @@
         <entry key="..\:/DEGREE/BPL_Repo/BPL-Project/BPL/app/src/main/res/layout/activity_dashboard.xml" value="0.10460992907801418" />
         <entry key="..\:/DEGREE/BPL_Repo/BPL-Project/BPL/app/src/main/res/layout/activity_debit_card.xml" value="0.21510416666666668" />
         <entry key="..\:/DEGREE/BPL_Repo/BPL-Project/BPL/app/src/main/res/layout/activity_payment_icon_view.xml" value="0.25" />
-        <entry key="..\:/DEGREE/BPL_Repo/BPL-Project/BPL/app/src/main/res/layout/activity_profile.xml" value="0.5" />
+        <entry key="..\:/DEGREE/BPL_Repo/BPL-Project/BPL/app/src/main/res/layout/activity_profile.xml" value="0.2" />
         <entry key="..\:/DEGREE/BPL_Repo/BPL-Project/BPL/app/src/main/res/layout/activity_see_more2.xml" value="0.21510416666666668" />
         <entry key="..\:/DEGREE/BPL_Repo/BPL-Project/BPL/app/src/main/res/layout/activity_settings.xml" value="0.21510416666666668" />
         <entry key="..\:/DEGREE/BPL_Repo/BPL-Project/BPL/app/src/main/res/layout/activity_signin.xml" value="0.10833333333333334" />

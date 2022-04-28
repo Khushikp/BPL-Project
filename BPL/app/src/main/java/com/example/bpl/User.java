@@ -6,11 +6,11 @@ public class User {
     int imageId;
 
     public User(String name,
-                String email, String phone, String address, String city, String pincode, String country, String gender, int imageId) {
+                String email, String phone, int imageId, String s, String address, String s1, String s2, String s3) {
         this.name = name;
         this.email = email;
         this.phone = phone;
-        this.address = address;
+        this.address = this.address;
         this.city = city;
         this.pincode = pincode;
         this.country = country;

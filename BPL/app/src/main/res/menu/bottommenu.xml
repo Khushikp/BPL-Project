@@ -3,7 +3,7 @@
 
         <item
             android:id="@+id/suggestion"
-            android:icon="@drawable/ic_menu_settings"
+            android:icon="@drawable/suggestion"
             android:title="@string/menu_suggestion" />
         <item
             android:id="@+id/booking"

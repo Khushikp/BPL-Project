@@ -5,50 +5,230 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:layout_marginTop="30dp"
     tools:context=".UserActivity">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/nameProfile"/>
-
-    <TextView
+        android:text="Profile :"
+        android:layout_margin="15dp"
+        android:textSize="30dp"
+        android:fontFamily="@font/courgette_regular"
+        android:textColor="@color/colorPrimaryDark"/>
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/emailProfile"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/phoneProfile"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/cityProfile"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/pincodeProfile"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/countryProfile"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/addressProfile"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/genderProfile"/>
+        android:background="@drawable/boxes"
+        android:layout_margin="10dp"
+        android:backgroundTint="@color/lightblueprofile"
+        android:padding="12dp"
+        android:orientation="vertical">
 
     <de.hdodenhof.circleimageview.CircleImageView
-        android:layout_width="wrap_content"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="10dp"
+        app:civ_border_color="#686565"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/imageProfile"
+        app:civ_border_width="2dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:textColor="@color/light_blue_600"
+            android:fontFamily="@font/lobster_regular"
+            android:text="Name :"/>
+    <TextView
+        android:id="@+id/nameProfile"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/profileImage"/>
+        android:textSize="20dp"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/lobster_regular"
+        android:layout_centerHorizontal="true"
+        android:text="" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textColor="@color/light_blue_600"
+                android:fontFamily="@font/lobster_regular"
+                android:text="Email :"/>
+
+        <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/lobster_regular"
+        android:id="@+id/emailProfile"
+        android:layout_marginLeft="10dp"
+        android:text=""/>
+        </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:textColor="@color/light_blue_600"
+                    android:fontFamily="@font/lobster_regular"
+                    android:text="Contact :"/>
+
+            <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:layout_marginLeft="10dp"
+        android:fontFamily="@font/lobster_regular"
+        android:id="@+id/phoneProfile"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textColor="@color/light_blue_600"
+                android:fontFamily="@font/lobster_regular"
+                android:text="City :"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="20dp"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/lobster_regular"
+        android:id="@+id/cityProfile"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textColor="@color/light_blue_600"
+                android:fontFamily="@font/lobster_regular"
+                android:text="Pincode :"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:fontFamily="@font/lobster_regular"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/pincodeProfile"
+        android:text=""/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textColor="@color/light_blue_600"
+                android:fontFamily="@font/lobster_regular"
+                android:text="Country :"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lobster_regular"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:layout_marginLeft="10dp"
+        android:text=""
+        android:id="@+id/countryProfile"/>
+        </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:textColor="@color/light_blue_600"
+                    android:fontFamily="@font/lobster_regular"
+                    android:text="Address :"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:fontFamily="@font/lobster_regular"
+        android:layout_marginLeft="10dp"
+        android:textSize="20dp"
+        android:text=""
+        android:id="@+id/addressProfile"/>
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textColor="@color/light_blue_600"
+                android:fontFamily="@font/lobster_regular"
+                android:text="Gender :"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/black"
+        android:fontFamily="@font/lobster_regular"
+        android:layout_marginLeft="10dp"
+        android:textSize="20dp"
+        android:id="@+id/genderProfile"/>
+        </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:id="@+id/btnBooking"
+        android:background="@color/light_blue_400"
+        android:text="Booking"/>
+    </LinearLayout>
 </LinearLayout>

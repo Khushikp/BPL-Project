@@ -7,11 +7,11 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/boxes"
-        android:layout_marginTop="16dp">
+        android:layout_margin="5dp"
+        android:background="@drawable/boxes">
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginVertical="10dp"
             android:id="@+id/listlayout1"
@@ -21,20 +21,20 @@
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:id="@+id/profileimg1"
-                android:layout_marginStart="20dp"
+                android:layout_marginStart="10dp"
                 android:src="@drawable/profile6"/>
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
+                android:layout_marginStart="10dp"
                 android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/list1"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/profile1"
+                    android:text="@string/profile6"
                     android:textColor="@color/black"
                     android:textSize="26sp"
                     android:textStyle="bold" />
@@ -55,26 +55,15 @@
             </LinearLayout>
 
         </LinearLayout>
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Profile"
-            android:layout_toRightOf="@+id/listlayout1"
-            android:id="@+id/btnprofile1"
-            android:background="@color/light_blue_600"
-            android:layout_margin="15dp"/>
-
-
     </RelativeLayout>
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/boxes"
-        android:layout_marginTop="16dp">
+        android:layout_margin="5dp"
+        android:background="@drawable/boxes">
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginVertical="10dp"
             android:id="@+id/listlayout2"
@@ -87,7 +76,7 @@
                 android:src="@drawable/profile7"/>
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:orientation="vertical">
@@ -115,29 +104,17 @@
                     android:text="8945671215" />
 
             </LinearLayout>
-
-
         </LinearLayout>
+       </RelativeLayout>
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Profile"
-            android:layout_toRightOf="@+id/listlayout2"
-            android:id="@+id/btnprofile2"
-            android:background="@color/light_blue_600"
-            android:layout_margin="20dp"/>
-
-
-    </RelativeLayout>
     <RelativeLayout
         android:layout_width="match_parent"
+        android:layout_margin="5dp"
         android:layout_height="wrap_content"
-        android:background="@drawable/boxes"
-        android:layout_marginTop="16dp">
+        android:background="@drawable/boxes">
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginVertical="10dp"
             android:id="@+id/listlayout3"
@@ -147,10 +124,10 @@
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:layout_marginStart="20dp"
-                android:src="@drawable/profile8"/>
+                android:src="@drawable/profile5"/>
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:orientation="vertical">
@@ -178,25 +155,16 @@
                     android:text="8975641215" />
             </LinearLayout>
         </LinearLayout>
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Profile"
-            android:layout_toRightOf="@+id/listlayout3"
-            android:id="@+id/btnprofile3"
-            android:background="@color/light_blue_600"
-            android:layout_margin="20dp"/>
-
 
     </RelativeLayout>
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/boxes"
-        android:layout_marginTop="16dp">
+        android:layout_margin="5dp"
+        android:background="@drawable/boxes">
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginVertical="10dp"
             android:id="@+id/listlayout4"
@@ -206,10 +174,10 @@
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:layout_marginStart="20dp"
-                android:src="@drawable/profile9"/>
+                android:src="@drawable/profile4"/>
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:orientation="vertical">
@@ -237,23 +205,16 @@
                     android:text="7896541235" />
             </LinearLayout>
         </LinearLayout>
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Profile"
-            android:layout_toRightOf="@+id/listlayout4"
-            android:id="@+id/btnprofile4"
-            android:background="@color/light_blue_600"
-            android:layout_margin="20dp"/>
+
     </RelativeLayout>
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/boxes"
-        android:layout_marginTop="16dp">
+        android:layout_margin="5dp"
+        android:background="@drawable/boxes">
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginVertical="10dp"
             android:id="@+id/listlayout5"
@@ -266,7 +227,7 @@
                 android:src="@drawable/profile10" />
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:orientation="vertical">
@@ -295,26 +256,15 @@
 
             </LinearLayout>
         </LinearLayout>
-        <Button
-            android:id="@+id/btnprofile5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginBottom="20dp"
-            android:layout_toRightOf="@+id/listlayout5"
-            android:background="@color/light_blue_600"
-            android:text="Profile" />
-    </RelativeLayout>
+        </RelativeLayout>
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/boxes"
-        android:layout_marginTop="16dp">
+        android:layout_margin="5dp">
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginVertical="10dp"
             android:id="@+id/listlayout6"
@@ -327,7 +277,7 @@
                 android:src="@drawable/profile11" />
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:orientation="vertical">
@@ -356,26 +306,13 @@
 
             </LinearLayout>
         </LinearLayout>
-
-        <Button
-            android:id="@+id/btnprofile6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginBottom="20dp"
-            android:layout_toRightOf="@+id/listlayout6"
-            android:background="@color/light_blue_600"
-            android:text="Profile" />
-
-
     </RelativeLayout>
+
     <RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/boxes"
-    android:layout_marginTop="16dp">
+    android:layout_margin="5dp"
+    android:background="@drawable/boxes">
 
         <LinearLayout
             android:id="@+id/listlayout7"
@@ -391,7 +328,7 @@
                 android:src="@drawable/profile12" />
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:orientation="vertical">
@@ -423,26 +360,15 @@
 
         </LinearLayout>
 
-    <Button
-        android:id="@+id/btnprofile7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="20dp"
-        android:layout_toRightOf="@+id/listlayout7"
-        android:background="@color/light_blue_600"
-        android:text="Profile" />
     </RelativeLayout>
     <RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@drawable/boxes"
-    android:layout_marginTop="16dp">
+    android:layout_margin="5dp">
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginVertical="10dp"
         android:id="@+id/listlayout8"
@@ -455,7 +381,7 @@
             android:src="@drawable/profile13" />
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:orientation="vertical">
@@ -483,31 +409,17 @@
                 android:text="1254897632" />
 
         </LinearLayout>
-
     </LinearLayout>
-
-    <Button
-        android:id="@+id/btnprofile8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="20dp"
-        android:layout_toRightOf="@+id/listlayout8"
-        android:background="@color/light_blue_600"
-        android:text="Profile" />
-
-
 </RelativeLayout>
+
     <RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/boxes"
-    android:layout_marginTop="16dp">
+    android:layout_margin="5dp"
+    android:background="@drawable/boxes">
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginVertical="10dp"
         android:id="@+id/listlayout9"
@@ -548,31 +460,17 @@
                 android:text="7654213098" />
 
         </LinearLayout>
-
     </LinearLayout>
-
-    <Button
-        android:id="@+id/btnprofile9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="20dp"
-        android:layout_toRightOf="@+id/listlayout9"
-        android:background="@color/light_blue_600"
-        android:text="Profile" />
-
-
 </RelativeLayout>
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/boxes"
-        android:layout_marginTop="16dp">
+        android:layout_margin="5dp">
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginVertical="10dp"
             android:id="@+id/listlayout10"
@@ -585,7 +483,7 @@
                 android:src="@drawable/profile1" />
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:orientation="vertical">
@@ -611,23 +509,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:text="7654213098" />
-
             </LinearLayout>
-
         </LinearLayout>
-
-        <Button
-            android:id="@+id/btnprofile10"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginBottom="20dp"
-            android:layout_toRightOf="@+id/listlayout10"
-            android:background="@color/light_blue_600"
-            android:text="Profile" />
-
-
     </RelativeLayout>
 </LinearLayout>

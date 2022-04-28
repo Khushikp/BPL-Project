@@ -6,22 +6,18 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import androidx.annotation.GravityInt;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.navigation.fragment.NavHostFragment;
 import androidx.navigation.ui.AppBarConfiguration;
 
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.models.SlideModel;
 import com.example.bpl.databinding.FragmentFirst2Binding;
-import com.example.bpl.ui.booking.BookingFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 
@@ -159,6 +155,7 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.activity_main_drawer,menu);
+        getMenuInflater().inflate(R.menu.dashboard,menu);
         return true;
     }
 
@@ -173,6 +170,43 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
         if(item.getItemId() == R.id.nav_booking) {
         //getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new profilefragment()).commit();
             Intent newIntent = new Intent(this, booking.class);
+            startActivity(newIntent);
+        }
+
+        else if(item.getItemId() == R.id.nav_wishlist) {
+            //getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new profilefragment()).commit();
+            Intent newIntent = new Intent(this, wishlist.class);
+            startActivity(newIntent);
+        }
+        else if(item.getItemId() == R.id.nav_setting) {
+            //getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new profilefragment()).commit();
+            Intent newIntent = new Intent(this,settings .class);
+            startActivity(newIntent);
+        }
+        else if(item.getItemId() == R.id.nav_share) {
+            //getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new profilefragment()).commit();
+            /*ApplicationInfo api = getApplicationContext().getApplicationInfo();
+            String apkpath = api.sourceDir;
+            Intent intent = new Intent(Intent.ACTION_SEND);
+            intent.setType("http://play.google.com/store/apps/details?id-BPL");
+            intent.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(new File(apkpath)));
+            startActivity(Intent.createChooser(intent, "Sharevia"));*/
+            Intent in = new Intent();
+            in.setAction(Intent.ACTION_SEND);
+            in.putExtra(Intent.EXTRA_TEXT,"http://play.google.com/store/apps/details?id-BPL");
+            in.setType("text/plain");
+            startActivity(Intent.createChooser(in,"Share via"));
+
+        }
+
+        else if(item.getItemId() == R.id.nav_help) {
+            //getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new profilefragment()).commit();
+            Intent newIntent = new Intent(this, help.class);
+            startActivity(newIntent);
+        }
+        else if(item.getItemId() == R.id.nav_logout) {
+            //getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new profilefragment()).commit();
+            Intent newIntent = new Intent(this, logout.class);
             startActivity(newIntent);
         }
         return true;
@@ -191,4 +225,5 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
 
         return true;
     }*/
+
 }

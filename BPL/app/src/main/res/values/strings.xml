@@ -18,8 +18,8 @@
     <string name="phone_number">Phone Number</string>
     <string name="confirm_password">Confirm Password</string>
     <string name="role">Role :</string>
-    <string name="photographer">Photographer :</string>
-    <string name="Customer">Customer :</string>
+    <string name="photographer">Photographer</string>
+    <string name="Customer">Customer</string>
     <string name="already_have_an_account">Already have an account? Log in</string>
 
     <string name="profile1">Andrew Taylor</string>

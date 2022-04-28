@@ -39,7 +39,6 @@
                 android:fontFamily="@font/courgette_regular"
                 android:textStyle="bold"/>
 
-
             <EditText
                 android:id="@+id/user_name"
                 android:layout_width="match_parent"
@@ -65,7 +64,7 @@
                 android:inputType="phone"
                 android:paddingTop="16dp"
                 android:paddingBottom="16dp"
-                android:hint="@string/email" />
+                android:hint="@string/phone_number" />
 
             <EditText
                 android:id="@+id/password"

@@ -11,7 +11,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class Login extends AppCompatActivity {
 
-    TextView createacc, forgotpass;
+    TextView createAccount, forgotPassword;
     private FirebaseAuth mAuth;
 
     @Override
@@ -20,15 +20,11 @@ public class Login extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         mAuth = FirebaseAuth.getInstance();
-//        Log.d(tag, message);
 
-        createacc = (TextView) findViewById(R.id.createacc);
-        forgotpass = (TextView) findViewById(R.id.forgetpass);
+        createAccount = (TextView) findViewById(R.id.create_account);
+        forgotPassword = (TextView) findViewById(R.id.forget_password);
 
-        Intent intent = new Intent(Login.this, Dashboard.class);
-        startActivity(intent);
-
-        createacc.setOnClickListener(new View.OnClickListener() {
+        createAccount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent in = new Intent(Login.this, Signin.class);
@@ -37,7 +33,7 @@ public class Login extends AppCompatActivity {
         });
 
         //---------if Forget password click-----------
-        forgotpass.setOnClickListener(new View.OnClickListener() {
+        forgotPassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent in = new Intent(Login.this, forgetpass.class);

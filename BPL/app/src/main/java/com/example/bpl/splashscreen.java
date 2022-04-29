@@ -18,7 +18,7 @@ public class splashscreen extends AppCompatActivity {
                public void run() {
                    Intent intent = new Intent(splashscreen.this, Dashboard.class);
                    startActivity(intent);
-
+                   finish();
                }
            },1500);
        }
